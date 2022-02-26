@@ -4,6 +4,7 @@ import React, { useEffect, useState } from 'react'
 
 import Header from "../../common/header/Header"
 import Heading from "../../common/heading/Heading"
+import ReleasedMovies from "./ReleasedMovies"
 
 import "./Home.css"
 
@@ -22,7 +23,7 @@ const useStyles = makeStyles({
 
     titleBar: {
         background:
-            "linear-gradient(to top, rgba(0,0,0,0.7) 0%, rgba(0,0,0,0.3) 70%, rgba(0,0,0,0) 100%)",
+            "linear-gradient(to top, rgba(0,0,0,0.7) 0%, rgba(0,0,0,0.3) 70%, rgba(0,0,0,0) 100%) !important",
     },
 })
 
@@ -58,6 +59,11 @@ const Home = () => {
                         </GridListTile>
                     ))}
                 </GridList>
+            </div>
+            <div className="second-section">
+                <div className="released-movies">
+                    <ReleasedMovies movies={movies} />
+                </div>
             </div>
         </React.Fragment>
     )

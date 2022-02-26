@@ -1,0 +1,11 @@
+.second-section {
+  display: flex;
+}
+
+.released-movies {
+  width: 76%;
+}
+
+.released-movies:hover {
+  cursor: pointer;
+}
