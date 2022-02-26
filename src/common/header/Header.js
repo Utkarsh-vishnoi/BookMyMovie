@@ -11,7 +11,7 @@ import './Header.css'
 const Header = ({ bookShowID, bookShow }) => {
 
     const [isLoggedIn, setIsLoggedIn] = useState(false)
-    const [loginOpen, setLoginOpen] = useState(true)
+    const [loginOpen, setLoginOpen] = useState(false)
     const [activeTab, setActiveTab] = useState(0)
     const [registered, setRegistered] = useState(false)
 
