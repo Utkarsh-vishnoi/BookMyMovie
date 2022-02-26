@@ -17,7 +17,7 @@ const TabContent = ({ children, activeTab, tabIndex, ...other }) => {
                 </div>
             )}
         </div>
-    );
+    )
 }
 
 export default TabContent
