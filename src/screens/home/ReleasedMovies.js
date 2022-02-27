@@ -1,29 +1,20 @@
 import React from "react"
 import { makeStyles } from '@material-ui/styles'
-import { GridList, GridListTile, GridListTileBar, IconButton } from "@material-ui/core"
+import { GridList, GridListTile, GridListTileBar } from "@material-ui/core"
 import { Link } from "react-router-dom"
 
 const useStyles = makeStyles({
-    root: {
-        display: "flex",
-        flexWrap: "wrap",
-        justifyContent: "space-around",
-        overflow: "hidden",
-    },
-    gridList: {
-        width: 1000,
-        height: 1050,
-    },
-    icon: {
-        color: "rgba(255, 255, 255, 0.54)",
-    },
+    titleBar: {
+        background:
+            "linear-gradient(to top, rgba(0,0,0,0.7) 0%, rgba(0,0,0,0.3) 70%, rgba(0,0,0,0) 100%) !important",
+    }
 })
 
 const ReleasedMovies = ({ movies }) => {
     const classes = useStyles()
 
     return (
-        <div className={classes.root}>
+        <div>
             <GridList cellHeight={350} cols={4}>
                 {
                     movies.map((tile) => {
@@ -44,11 +35,9 @@ const ReleasedMovies = ({ movies }) => {
                                 <GridListTileBar
                                     title={tile.title}
                                     subtitle={<span>Release Date: {expectedDate}</span>}
-                                    actionIcon={
-                                        <IconButton
-                                            aria-label={`info about ${tile.title}`}
-                                            className={classes.root} />
-                                    }>
+                                    classes={{
+                                        root: classes.titleBar
+                                    }}>
                                 </GridListTileBar>
                             </GridListTile>
                         )

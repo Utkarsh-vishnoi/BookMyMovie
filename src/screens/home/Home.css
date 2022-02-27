@@ -4,8 +4,14 @@
 
 .released-movies {
   width: 76%;
+  margin: 16px;
 }
 
 .released-movies:hover {
   cursor: pointer;
+}
+
+.filter-form {
+  margin: 16px;
+  width: 24%;
 }
