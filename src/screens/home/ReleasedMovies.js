@@ -21,7 +21,7 @@ const ReleasedMovies = ({ movies }) => {
                         let expectedDate = new Date(tile.release_date).toDateString()
                         return (
                             <GridListTile key={tile.id}>
-                                <Link to={"/movie-details/" + tile.id}>
+                                <Link to={"/movie/" + tile.id}>
                                     <img
                                         src={tile.poster_url}
                                         alt={tile.title}
