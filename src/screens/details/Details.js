@@ -72,7 +72,7 @@ const Details = ({ match }) => {
                 <div className="main-content">
                     {/* First Section */}
                     <div className="first-container">
-                        <img class="movie-poster" src={movieData.poster_url} alt={movieData.title} />
+                        <img className="movie-poster" src={movieData.poster_url} alt={movieData.title} />
                     </div>
                     {/* Second Section */}
                     <div className="mid-container">
