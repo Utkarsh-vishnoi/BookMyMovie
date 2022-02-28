@@ -1,0 +1,50 @@
+.movie-poster {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.back-link {
+  text-decoration: none;
+  color: #000000;
+}
+
+.back-to-home {
+  margin: 8px 0px 0px 24px;
+  height: 24px;
+}
+
+.back-to-home:hover {
+  cursor: pointer;
+}
+
+.main-content {
+  display: flex;
+}
+
+.mid-container {
+  width: 60%;
+}
+
+.first-container, .last-container {
+  width: 20%;
+}
+
+.youtube-container {
+  overflow: hidden;
+  padding-top: 56.25%; /* 16:9*/
+  position: relative;
+}
+
+.youtube-container iframe {
+   border: 0;
+   height: 100%;
+   left: 0;
+   position: absolute;
+   top: 0;
+   width: 100%;
+}
+
+.artist-tile {
+  height: 260px !important;
+}
