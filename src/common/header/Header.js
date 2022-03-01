@@ -43,7 +43,7 @@ const Header = ({ bookShowID, bookShow }) => {
                 <div className="buttons">
                     {
                         bookShow ? (
-                            <Link to={"/book-show/" + bookShowID} style={{ textDecoration: "none" }}>
+                            <Link to={"/bookshow/" + bookShowID} style={{ textDecoration: "none" }}>
                                 <Button variant='contained' color='primary' name='Book Show'>Book Show</Button>
                             </Link>
                         ) : null
