@@ -26,23 +26,25 @@
   width: 60%;
 }
 
-.first-container, .last-container {
+.first-container,
+.last-container {
   width: 20%;
 }
 
 .youtube-container {
   overflow: hidden;
-  padding-top: 56.25%; /* 16:9*/
+  padding-top: 56.25%;
+  /* 16:9*/
   position: relative;
 }
 
 .youtube-container iframe {
-   border: 0;
-   height: 100%;
-   left: 0;
-   position: absolute;
-   top: 0;
-   width: 100%;
+  border: 0;
+  height: 100%;
+  left: 0;
+  position: absolute;
+  top: 0;
+  width: 100%;
 }
 
 .artist-tile {
