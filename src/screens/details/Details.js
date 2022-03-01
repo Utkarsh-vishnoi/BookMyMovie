@@ -26,7 +26,6 @@ const Details = ({ match }) => {
             .then(response => response.json())
             .then(data => {
                 setMovieData(data)
-                console.log(data)
                 setGenres(data.genres)
                 setYouttubeUrl(data.trailer_url)
                 setActors(data.artists)
@@ -53,7 +52,7 @@ const Details = ({ match }) => {
         height: "390",
         width: "640",
         playerVars: { // https://developers.google.com/youtube/player_parameters
-            autoplay: 0,
+            autoplay: 1,
             origin: "http://localhost:3000",
         },
     }
@@ -62,7 +61,7 @@ const Details = ({ match }) => {
 
     return (
         <Fragment>
-            <Header bookShow={true} bookShowId={id} />
+            <Header bookShow={true} bookShowID={id} />
             <Typography style={{ marginTop: "10px" }}>
                 <Link to="/" className="back-link">
                     <span className="back-to-home">&#60; Back to Home</span>
@@ -121,6 +120,7 @@ const Details = ({ match }) => {
                                 <YouTube
                                     containerClassName="youtube-container"
                                     videoId={youtubeId}
+                                    autoplay
                                     opts={opts}
                                     onReady={(event) => {
                                         event.target.pauseVideo()
