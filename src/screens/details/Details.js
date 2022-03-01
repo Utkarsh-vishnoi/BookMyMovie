@@ -53,7 +53,7 @@ const Details = ({ match }) => {
         height: "390",
         width: "640",
         playerVars: { // https://developers.google.com/youtube/player_parameters
-            autoplay: 0,
+            autoplay: 1,
             origin: "http://localhost:3000",
         },
     }
@@ -121,6 +121,7 @@ const Details = ({ match }) => {
                                 <YouTube
                                     containerClassName="youtube-container"
                                     videoId={youtubeId}
+                                    autoplay
                                     opts={opts}
                                     onReady={(event) => {
                                         event.target.pauseVideo()
