@@ -26,7 +26,6 @@ const Details = ({ match }) => {
             .then(response => response.json())
             .then(data => {
                 setMovieData(data)
-                console.log(data)
                 setGenres(data.genres)
                 setYouttubeUrl(data.trailer_url)
                 setActors(data.artists)
@@ -62,7 +61,7 @@ const Details = ({ match }) => {
 
     return (
         <Fragment>
-            <Header bookShow={true} bookShowId={id} />
+            <Header bookShow={true} bookShowID={id} />
             <Typography style={{ marginTop: "10px" }}>
                 <Link to="/" className="back-link">
                     <span className="back-to-home">&#60; Back to Home</span>
